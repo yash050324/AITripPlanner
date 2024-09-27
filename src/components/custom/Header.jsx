@@ -44,9 +44,23 @@ function Header() {
     })
   }
 
+  const styles = {
+    container: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      padding: '10px',
+    },
+    logo: {
+      width: '100px',
+      height: '90%',  
+      borderRadius: '8px',
+    },
+  };
+
   return (
     <div className='p-3 shadow-sm flex justify-between items-center px-4'>
-      <img src='/logo.svg'/>
+      <img src='logo.png' alt="Logo" style={styles.logo}/>
       <div >
        {user? 
        <div className='flex items-center gap-4'>
