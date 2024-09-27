@@ -50,8 +50,12 @@ function CreateTrip() {
       setOpenDialog(true)
       return ;
     }
-    if(formData?.totalDays>5 || !formData?.location || !formData?.budget || !formData?.traveler){
+    if(!formData?.totalDays || !formData?.location || !formData?.budget || !formData?.traveler){
       toast("Please fill all details!")
+      return ;
+    }
+    if(formData?.totalDays>10){
+      toast("Please upgrade to our premium plans for large trips!!")
       return ;
     }
     toast("Planning your Trip.");
