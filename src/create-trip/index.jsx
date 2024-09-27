@@ -54,7 +54,7 @@ function CreateTrip() {
       toast("Please fill all details!")
       return ;
     }
-    toast("Form generated.");
+    toast("Planning your Trip.");
     setLoading(true);
     const FINAL_PROMPT=AI_PROMPT
     .replace('{location}',formData?.location)
